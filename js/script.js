@@ -20,15 +20,51 @@ if (kilometersUtente === Number){
 }
 
 
-// let userAge = Number = parseInt(prompt('quanti anni hai?'))
-// console.log(userAge, 'età passeggero')
+let userAge = Number = parseInt(prompt('quanti anni hai?'))
+console.log(userAge, 'età passeggero')
 
-// if (userAge === Number){
-//     console.log('procedi')
-// }else{
-//     console.log (alert('scrivi l\'età in numero'));
-// }
+if (userAge === Number){
+    console.log('procedi')
+}else{
+    console.log (alert('scrivi l\'età in numero'));
+}
 
 
-let ticket = kilometersUtente * 0.21;
-console.log(ticket)
+let ticketPieno = kilometersUtente * 0.21;
+console.log(ticketPieno +'€', 'prezzo biglietto pieno');
+
+
+let sconto20 = (ticketPieno * 20) / 100;
+console.log(sconto20, 'sconto 20%');
+
+
+let sconto40 = (ticketPieno * 40) / 100;
+console.log(sconto40, 'sconto 40%');
+
+
+let minorenni = userAge < 18;
+console.log(minorenni,'minorenne')
+
+if(minorenni = userAge < 20) {
+    console.log('usufruisci dello sconto per minori', sconto20+'€')
+}
+
+
+let over65 = userAge > 65;
+console.log(over65,'over65')
+
+if(over65 = userAge > 65) {
+    console.log('usufruisci dello sconto per over65', sconto40+'€')
+}
+
+
+
+
+const prezzoFinaleBiglietto = ('');
+document.getElementById(prezzoFinaleBiglietto).innerHTML = 'prezzo finale';
+
+if (minorenni) {
+    console.log(ticketPieno - sconto20, 'prezzo scontato del 20%');
+}else if (over65) {
+    console.log(ticketPieno - sconto40,'prezzo scontato del 40%');
+}
